@@ -13,3 +13,13 @@ for dna in skibidi:
  
 def to_jaden_case(sentence):
     return ' '.join(word.capitalize() for word in sentence.split())
+
+def duplicate_count(text):
+    seen = set()
+    dupes = set()
+    for char in text:
+        char = char.lower()
+        if char in seen:
+            dupes.add(char)
+        seen.add(char)
+    return len(dupes)
